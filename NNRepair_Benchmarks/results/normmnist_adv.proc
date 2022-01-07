@@ -1,0 +1,81 @@
+(10000, 28, 28, 1),(10000,)
+
+
+
+
+
+
+
+
+
+
+
+posLen : 2992
+negLen : 7008
+originLen:128
+nodeLen : 42
+outLen : 10
+
+
+
+
+Building Model
+
+Using license file /home/sunshuo/gurobi.lic
+Building time: 14.426485061645508
+Solving
+
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (linux64)
+Thread count: 28 physical cores, 56 logical processors, using up to 28 threads
+Optimize a model with 90000 rows, 430 columns and 7740000 nonzeros
+Model fingerprint: 0x53eb36a2
+Coefficient statistics:
+  Matrix range     [2e-06, 3e+01]
+  Objective range  [1e+01, 2e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e-05, 1e+01]
+Presolve time: 5.29s
+Presolved: 430 rows, 90430 columns, 7740430 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0   -2.6928000e+29   5.906462e+34   5.385600e-01      6s
+     586   -2.1917754e+27   3.820364e+33   4.771703e-03     11s
+     970   -6.2360445e+26   1.256837e+33   2.694314e-03     17s
+    1219    1.4462989e+26   1.006196e+33   1.677689e-03     21s
+    1578    9.6865102e+26   8.667674e+32   4.606116e-04     27s
+    1801    9.1810589e+00   1.113963e+07   0.000000e+00     32s
+
+Starting sifting (using simplex for sub-problems)...
+
+    Iter     Pivots    Primal Obj      Dual Obj        Time
+       0       1801     infinity      9.1809592e+00     32s
+       1       4230   3.2003549e+06   2.1806124e+01     33s
+       2       6517   1.7671082e+06   3.5454645e+01     34s
+       3       8410   1.6584433e+06   1.2596898e+02     35s
+       4       9977   1.6577697e+06   9.3694519e+05     36s
+       5      11425   1.6061997e+06   1.2435884e+06     37s
+
+Sifting complete
+
+   12524    1.5974790e+06   0.000000e+00   0.000000e+00     40s
+
+Solved in 12524 iterations and 39.96 seconds
+Optimal objective  1.597478987e+06
+Total time: 54.6093647480011
+(42, 10)
+(42, 10) (1, 10) (1, 128) (128, 10) (1, 10)
+[[ 3.50478646e-01  3.65689353e-01 -7.67199451e-01 ...  3.81158214e-01
+   2.11868543e-01 -1.70316422e-01]
+ [ 1.59520584e-01 -7.29145711e-01 -2.24023957e-01 ...  4.72285386e-01
+  -1.48266776e-01  1.63758803e-01]
+ [-1.01154531e-07 -1.31522712e-07  2.04554178e-08 ...  7.26640734e-08
+   2.47711593e-07  2.35138034e-07]
+ ...
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00 ...  0.00000000e+00
+   0.00000000e+00  0.00000000e+00]
+ [ 1.07067496e+00  7.35403712e-01  1.00828551e+00 ...  8.53316824e-01
+   6.95428230e-01  1.99485050e-01]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00 ...  0.00000000e+00
+   0.00000000e+00  0.00000000e+00]] [[-5.22554171  7.08913426  6.49575657  8.39716953 -4.80045146 17.44376355
+  -2.58744092 -8.17174025  5.22480736 10.83226874]]
+0.36568935307879363 7.089134258387071
