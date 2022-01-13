@@ -123,7 +123,7 @@ for ind in range(posLen):
 		posParam.append(oneConstr)
 posParam=np.array(posParam)
 
-b = np.full((len(posParam),1),-10)
+b = np.full((len(posParam),1),-5)
 MODEL.addMConstr( posParam, x, '>', b)
 
 negParam = []
@@ -168,17 +168,13 @@ for i in range(nodeLen):
 	W.append(newW)	
 W = np.array(W)
 W = W.reshape(W.shape[0],W.shape[1])
-print(W.shape)
 param = np.dot(pca.components_.transpose(),W)
 b = []
 for i in range(outLen):
 	b.append(x[outLen*nodeLen+i].x)
 b = np.array(b).reshape(1,-1)
 nb = np.dot(m,param)
-print (W.shape,b.shape,m.shape,param.shape,nb.shape)
 b = np.subtract(b,nb)
-print(param,b)
-print(param[0][1],b[0][1])
 
 fout = open("../results/squeezenet.txt","w")
 for i in range(outLen):

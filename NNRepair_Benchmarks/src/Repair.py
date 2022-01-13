@@ -125,7 +125,7 @@ for ind in range(negLen):
 		negParam.append(oneConstr)
 negParam=np.array(negParam)
 
-b = np.full((len(negParam),1),-10)
+b = np.full((len(negParam),1),-5)
 MODEL.addMConstr( negParam, x, '>', b)
 
 #OA = negLen*posParam.sum(axis=0)+posLen*negParam.sum(axis=0)
